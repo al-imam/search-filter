@@ -36,7 +36,9 @@ const SearchFilter: React.FunctionComponent = () => {
           <tbody className={classes.tableBody}>
             {pokemon
               .filter((p) =>
-                p.name.english.toLowerCase().includes(input.toLowerCase())
+                p.name.english
+                  .toLowerCase()
+                  .includes(input.trim().toLowerCase())
               )
               .slice(0, 50)
               .map((p) => (
