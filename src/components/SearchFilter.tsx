@@ -20,6 +20,7 @@ const SearchFilter: React.FunctionComponent = () => {
         value={input}
         onChange={(evt) => setInput(evt.target.value)}
         placeholder="Search pokemon"
+        className="p-2 rounded-sm outline-none mb-4 border-none text-center text-slate-900 placeholder:text-slate-300 "
       />
       {loading && "Loading...."}
       {error && "there was an error!!"}
