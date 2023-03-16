@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import TR from "./TR";
-import classes from "./searchFilter.module.css";
 import { Base } from "../PokemonType";
 
 const calcBase = (base: Base): number => {
@@ -25,15 +24,15 @@ const SearchFilter: React.FunctionComponent = () => {
       {loading && "Loading...."}
       {error && "there was an error!!"}
       {loading || error || (
-        <table className={classes.table}>
+        <table>
           <thead>
             <tr>
-              <th className={classes.headerCell}>Name</th>
-              <th className={classes.headerCell}>Type</th>
-              <th className={classes.headerCell}>Base</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Base</th>
             </tr>
           </thead>
-          <tbody className={classes.tableBody}>
+          <tbody>
             {pokemon
               .filter((p) =>
                 p.name.english
