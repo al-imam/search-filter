@@ -2,19 +2,9 @@ import SearchFilter from "./components/SearchFilter";
 
 function App() {
   return (
-    <div>
-      <h1>
-        <a
-          href="https://github.com/al-imam"
-          style={{
-            color: "var(--gray-8)",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            textDecoration: "underline var(--gray-8)",
-          }}
-        >
-          pokémon-table
-        </a>
+    <div className="flex justify-center flex-col max-w-lg mx-auto">
+      <h1 className="text-3xl py-4 text-white">
+        <a href="https://github.com/al-imam">pokémon-table</a>
       </h1>
       <SearchFilter />
     </div>
