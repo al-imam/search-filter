@@ -2,13 +2,7 @@ import SearchFilter from "./components/SearchFilter";
 
 function App() {
   return (
-    <div
-      style={{
-        width: "var(--gap-inline)",
-        margin: "0 auto",
-        paddingBlock: "1.5rem",
-      }}
-    >
+    <div>
       <h1>
         <a
           href="https://github.com/al-imam"
