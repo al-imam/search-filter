@@ -33,7 +33,7 @@ const SearchFilter: React.FunctionComponent = () => {
               <th className="p-2">Base</th>
             </tr>
           </thead>
-          <tbody className="text-slate-300 first:bg-red-900">
+          <tbody className="text-slate-300">
             {pokemon
               .filter((p) =>
                 p.name.english
