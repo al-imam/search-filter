@@ -7,9 +7,9 @@ const TR: React.FunctionComponent<{
 }> = ({ name, type, base }) => {
   return (
     <tr>
-      <td>{name}</td>
-      <td>{type}</td>
-      <td>{base}</td>
+      <td className="font-cstm p-2 text-base">{name}</td>
+      <td className="font-cstm p-2 text-base">{type}</td>
+      <td className="font-cstm p-2 text-base">{base}</td>
     </tr>
   );
 };
