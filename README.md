@@ -2,14 +2,15 @@
 
 <hr>
 
-***Technology in use!***
+**_Technology in use!_**
+
 > React <br>
-> Custom react hook <br>
 > Typescript <br>
-> Webpack <br>
+> tailwindcss <br>
+> Custom react hook <br>
 > Babel <br>
 > Css <br>
-> Cra <br>
+> vite <br>
 
 <br>
 

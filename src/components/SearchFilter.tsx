@@ -26,14 +26,14 @@ const SearchFilter: React.FunctionComponent = () => {
       {error && "there was an error!!"}
       {loading || error || (
         <table>
-          <thead>
+          <thead className="text-bold text-slate-50 bg-indigo-300 bg-opacity-10 ">
             <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Base</th>
+              <th className="p-2">Name</th>
+              <th className="p-2">Type</th>
+              <th className="p-2">Base</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-slate-300 first:bg-red-900">
             {pokemon
               .filter((p) =>
                 p.name.english
