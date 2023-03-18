@@ -35,7 +35,7 @@ const SearchFilter: React.FunctionComponent = () => {
         value={input}
         onChange={(evt) => setInput(evt.target.value)}
         placeholder="Search pokemon"
-        className="p-2 font-cstm caret-current rounded-sm outline-none bg-white mb-4 border-none text-center text-gray-700 placeholder:text-slate-300 focus:outline-blue-400 focus:outline-offset-0 outline-4 "
+        className="p-2 font-cstm caret-current rounded-sm outline-none bg-white mb-4 border-none text-center text-gray-700 placeholder:text-slate-300 transition-shadow focus:ring-4 ring-blue-500"
       />
       {loading && (
         <p className="text-gray-800 h-screen text-xl dark:text-white font-cstm py-4">
