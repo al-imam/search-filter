@@ -26,11 +26,17 @@ const SearchFilter: React.FunctionComponent = () => {
       {error && "there was an error!!"}
       {loading || error || (
         <table>
-          <thead className="text-bold text-left text-slate-50 bg-indigo-300 bg-opacity-10 border-b-2 border-b-violet-500">
+          <thead className=" text-slate-50 bg-indigo-300 bg-opacity-10 ">
             <tr>
-              <th className="p-2 font-cstm text-base">name</th>
-              <th className="p-2 font-cstm text-base">type</th>
-              <th className="p-2 font-cstm text-base">base</th>
+              <th className="p-2 font-cstm text-base uppercase font-light">
+                name
+              </th>
+              <th className="p-2 font-cstm text-base uppercase font-light">
+                type
+              </th>
+              <th className="p-2 font-cstm text-base uppercase font-light">
+                base
+              </th>
             </tr>
           </thead>
           <tbody className="text-slate-300 [&>*:nth-child(even)]:bg-indigo-200 [&>*:nth-child(even)]:bg-opacity-5 ">
