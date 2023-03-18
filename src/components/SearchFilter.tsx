@@ -9,6 +9,7 @@ const calcBase = (base: Base): number => {
 
 const SearchFilter: React.FunctionComponent = () => {
   const [input, setInput] = useState<string>("");
+  const [sortBy, setSortBy] = useState("lg");
   const { loading, error, pokemon } = useFetch(
     "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
   );
@@ -19,8 +20,12 @@ const SearchFilter: React.FunctionComponent = () => {
         .filter((p) =>
           p.name.english.toLowerCase().includes(input.trim().toLowerCase())
         )
-        .slice(0, 10),
-    [input.trim()]
+        .sort((a, b) =>
+          sortBy === "lg"
+            ? -calcBase(a.base) - calcBase(b.base)
+            : calcBase(a.base) - calcBase(b.base)
+        ),
+    [input, sortBy, pokemon]
   );
 
   return (
