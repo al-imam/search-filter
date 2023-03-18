@@ -14,12 +14,14 @@ function App() {
         </h1>
         <SearchFilter />
       </div>
-      <a
-        href="https://github.com/al-imam"
-        className="p-4 block text-green-400 font-cstm text-center bg-gray-900 outline-none border-none focus-visible:underline hover:underline "
-      >
-        al-imam
-      </a>
+      <div className="p-4 block text-green-400 font-cstm text-center bg-gray-900">
+        <a
+          href="https://github.com/al-imam"
+          className="outline-none border-none focus-visible:underline hover:underline "
+        >
+          al-imam
+        </a>
+      </div>
     </main>
   );
 }
