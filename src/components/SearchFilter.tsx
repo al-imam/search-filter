@@ -37,8 +37,16 @@ const SearchFilter: React.FunctionComponent = () => {
         placeholder="Search pokemon"
         className="p-2 font-cstm caret-current rounded-sm outline-none bg-white mb-4 border-none text-center text-gray-700 placeholder:text-slate-300 focus:outline-blue-400 focus:outline-offset-0 outline-4 "
       />
-      {loading && "Loading...."}
-      {error && "there was an error!!"}
+      {loading && (
+        <p className="text-gray-800 text-xl dark:text-white font-cstm py-10">
+          Loading...
+        </p>
+      )}
+      {error && (
+        <p className="text-red-900 text-xl font-cstm py-10">
+          Something went wrong!
+        </p>
+      )}
       {loading || error || (
         <table>
           <thead className=" text-indigo-900 bg-blue-900 bg-opacity-10 dark:text-slate-50 dark:bg-indigo-300 dark:bg-opacity-10 ">
