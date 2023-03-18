@@ -38,12 +38,12 @@ const SearchFilter: React.FunctionComponent = () => {
         className="p-2 font-cstm caret-current rounded-sm outline-none bg-white mb-4 border-none text-center text-gray-700 placeholder:text-slate-300 focus:outline-blue-400 focus:outline-offset-0 outline-4 "
       />
       {loading && (
-        <p className="text-gray-800 text-xl dark:text-white font-cstm py-4">
+        <p className="text-gray-800 h-screen text-xl dark:text-white font-cstm py-4">
           Loading...
         </p>
       )}
       {error && (
-        <p className="text-red-900 text-xl font-cstm py-4">
+        <p className="text-red-900 h-screen text-xl font-cstm py-4">
           Something went wrong!
         </p>
       )}
