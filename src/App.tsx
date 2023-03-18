@@ -16,7 +16,7 @@ function App() {
       </div>
       <a
         href="https://github.com/al-imam"
-        className="p-4 block text-green-400 font-cstm text-center bg-gray-900"
+        className="p-4 block text-green-400 font-cstm text-center bg-gray-900 outline-none border-none"
       >
         al-imam
       </a>
