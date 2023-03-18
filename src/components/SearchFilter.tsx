@@ -49,7 +49,10 @@ const SearchFilter: React.FunctionComponent = () => {
               <th className="p-2 font-cstm text-base uppercase font-light">
                 type
               </th>
-              <th className="p-2 font-cstm text-base uppercase font-light">
+              <th
+                className="p-2 font-cstm text-base uppercase font-light cursor-pointer select-none"
+                onClick={() => setSortBy((p) => (p === "lg" ? "sm" : "lg"))}
+              >
                 base
               </th>
             </tr>
