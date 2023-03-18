@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import TR from "./TR";
 import { Base } from "../PokemonType";
@@ -11,6 +11,16 @@ const SearchFilter: React.FunctionComponent = () => {
   const [input, setInput] = useState<string>("");
   const { loading, error, pokemon } = useFetch(
     "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+  );
+
+  const filter = useMemo(
+    () =>
+      pokemon
+        .filter((p) =>
+          p.name.english.toLowerCase().includes(input.trim().toLowerCase())
+        )
+        .slice(0, 10),
+    [input.trim()]
   );
 
   return (
@@ -40,21 +50,14 @@ const SearchFilter: React.FunctionComponent = () => {
             </tr>
           </thead>
           <tbody className="text-slate-300 [&>*:nth-child(even)]:bg-indigo-200 [&>*:nth-child(even)]:bg-opacity-5 ">
-            {pokemon
-              .filter((p) =>
-                p.name.english
-                  .toLowerCase()
-                  .includes(input.trim().toLowerCase())
-              )
-              .slice(0, 50)
-              .map((p) => (
-                <TR
-                  key={p.id}
-                  name={p.name.english}
-                  type={p.type.join(" ")}
-                  base={calcBase(p.base)}
-                />
-              ))}
+            {filter.map((p) => (
+              <TR
+                key={p.id}
+                name={p.name.english}
+                type={p.type.join(" ")}
+                base={calcBase(p.base)}
+              />
+            ))}
           </tbody>
         </table>
       )}
