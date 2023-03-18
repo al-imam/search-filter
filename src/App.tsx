@@ -14,7 +14,12 @@ function App() {
         </h1>
         <SearchFilter />
       </div>
-      <a href="https://github.com/al-imam">al-imam</a>
+      <a
+        href="https://github.com/al-imam"
+        className="p-4 block text-green-400 font-cstm text-center bg-gray-900"
+      >
+        al-imam
+      </a>
     </main>
   );
 }
